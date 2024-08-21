@@ -15,4 +15,12 @@ down:
 destroy:
 	@$(DOCKER_COMPOSE) down
 
-.PHONY: up down destroy
+# Define a meta 'start' que executa 'docker-compose start'
+start:
+	@$(DOCKER_COMPOSE) start
+
+# Define a meta 'stop' que executa 'docker-compose stop'
+stop:
+	@$(DOCKER_COMPOSE) stop
+
+.PHONY: up down destroy start stop
