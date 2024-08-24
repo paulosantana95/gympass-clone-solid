@@ -19,10 +19,10 @@ describe('Get User Profile Use Case', () => {
     await gymsRepository.create({
       id: 'gym-01',
       title: 'Academia JS',
-      description: '',
-      phone: '',
-      latitude: new Decimal(-3.7156766),
-      longitude: new Decimal(-38.5962975),
+      description: null,
+      phone: null,
+      latitude: -3.7156766,
+      longitude: -38.5962975,
     })
 
     vi.useFakeTimers()
