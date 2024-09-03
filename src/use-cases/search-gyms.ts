@@ -1,5 +1,5 @@
-import { GymsRepository } from "@/repositories/gyms-repository"
-import { Gym } from "@prisma/client"
+import { GymsRepository } from '@/repositories/gyms-repository'
+import { Gym } from '@prisma/client'
 
 interface SearchGymsUseCaseRequest {
   query: string
@@ -11,11 +11,11 @@ interface SearchGymsUseCaseResponse {
 }
 
 export class SearchGymsUseCase {
-  constructor(private gymsRepository: GymsRepository) { }
+  constructor(private gymsRepository: GymsRepository) {}
 
   async execute({
     query,
-    page
+    page,
   }: SearchGymsUseCaseRequest): Promise<SearchGymsUseCaseResponse> {
     const gyms = await this.gymsRepository.searchMany(query, page)
 
@@ -23,5 +23,4 @@ export class SearchGymsUseCase {
       gyms,
     }
   }
-
 }

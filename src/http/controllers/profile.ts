@@ -10,6 +10,6 @@ export async function profile(request: FastifyRequest, reply: FastifyReply) {
     user: {
       ...user,
       password_hash: undefined,
-    }
+    },
   })
 }

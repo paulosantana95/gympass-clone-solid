@@ -34,9 +34,7 @@ describe('Search Gyms Use Case', () => {
     })
 
     expect(gyms).toHaveLength(1)
-    expect(gyms).toEqual([
-      expect.objectContaining({ title: 'Javascript Gym' }),
-    ])
+    expect(gyms).toEqual([expect.objectContaining({ title: 'Javascript Gym' })])
   })
 
   it('should be able to fetch paginated gym search', async () => {
@@ -58,7 +56,7 @@ describe('Search Gyms Use Case', () => {
     expect(gyms).toHaveLength(2)
     expect(gyms).toEqual([
       expect.objectContaining({ title: 'Javascript Gym 21' }),
-      expect.objectContaining({ title: 'Javascript Gym 22' })
+      expect.objectContaining({ title: 'Javascript Gym 22' }),
     ])
   })
 })
